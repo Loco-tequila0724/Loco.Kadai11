@@ -13,6 +13,7 @@
 		38A9BE8F269B115E00EA61CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A9BE8D269B115E00EA61CA /* Main.storyboard */; };
 		38A9BE91269B116100EA61CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A9BE90269B116100EA61CA /* Assets.xcassets */; };
 		38A9BE94269B116100EA61CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A9BE92269B116100EA61CA /* LaunchScreen.storyboard */; };
+		38A9BEA0269B1BF800EA61CA /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9BE9F269B1BF800EA61CA /* SelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		38A9BE90269B116100EA61CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A9BE93269B116100EA61CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38A9BE95269B116100EA61CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A9BE9F269B1BF800EA61CA /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				38A9BE87269B115E00EA61CA /* AppDelegate.swift */,
 				38A9BE89269B115E00EA61CA /* SceneDelegate.swift */,
 				38A9BE8B269B115E00EA61CA /* ViewController.swift */,
+				38A9BE9F269B1BF800EA61CA /* SelectionViewController.swift */,
 				38A9BE8D269B115E00EA61CA /* Main.storyboard */,
 				38A9BE90269B116100EA61CA /* Assets.xcassets */,
 				38A9BE92269B116100EA61CA /* LaunchScreen.storyboard */,
@@ -77,6 +80,7 @@
 				38A9BE80269B115E00EA61CA /* Sources */,
 				38A9BE81269B115E00EA61CA /* Frameworks */,
 				38A9BE82269B115E00EA61CA /* Resources */,
+				38A9BEA1269B1C5700EA61CA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,12 +136,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38A9BEA1269B1C5700EA61CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38A9BE80269B115E00EA61CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				38A9BE8C269B115E00EA61CA /* ViewController.swift in Sources */,
+				38A9BEA0269B1BF800EA61CA /* SelectionViewController.swift in Sources */,
 				38A9BE88269B115E00EA61CA /* AppDelegate.swift in Sources */,
 				38A9BE8A269B115E00EA61CA /* SceneDelegate.swift in Sources */,
 			);
