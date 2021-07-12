@@ -28,8 +28,8 @@ class SelectionViewController: UIViewController, UITableViewDelegate, UITableVie
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedPrefecture = prefectureNames[indexPath.row]
-        self.delegate?.didSelectPrefecture(prefectureName: selectedPrefecture)
         tableView.deselectRow(at: indexPath, animated: true)
+        self.delegate?.didSelectPrefecture(prefectureName: selectedPrefecture)
         dismiss(animated: true, completion: nil)
     }
 }
